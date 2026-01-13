@@ -1,4 +1,4 @@
-SYSTEM = 1T-WSe2
+ SYSTEM = 1T-WSe2
  Starting parameters for this run:
    NWRITE =      2    write-flag
    ISTART =      0    job   : 0-new, 1-cont, 2-samecut
