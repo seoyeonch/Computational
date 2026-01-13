@@ -1,6 +1,4 @@
-Purpose:
-k-point mesh convergence test to ensure sufficient Brillouin zone sampling.
+Performs a k-point mesh convergence test to ensure sufficient
+Brillouin zone sampling for total energy accuracy.
 
-Notes:
-The converged k-point mesh was used consistently
-for final relaxation and electronic structure calculations.
+The converged mesh is used consistently in subsequent calculations.
