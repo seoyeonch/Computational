@@ -80,6 +80,10 @@ Recommended execution order for each phase:
 5. `05_dos/` – density of states calculation
 6. `06_band/` - band structure along high-symmetry k-paths
 
+Note: Convergence tests (ENCUT/k-point) were first performed on the initial structure
+to select stable parameters, followed by a final structural relaxation using those parameters
+before DOS/band calculations.
+
 Large binary output files (e.g., WAVECAR, CHGCAR, POTCAR) are excluded from the repository.
 
 ---
