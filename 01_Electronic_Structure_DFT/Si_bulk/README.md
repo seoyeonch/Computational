@@ -30,6 +30,11 @@ used for more complex material systems.
 - ENCUT convergence within ~1 meV/atom above XX eV
 - k-point convergence within ~1 meV/atom above XX × XX × XX
 
+Note: Convergence tests (ENCUT and k-point mesh) were first performed
+on the initial structure to determine stable computational parameters,
+followed by a final structural relaxation using those parameters
+prior to DOS and band structure calculations.
+
 ---
 
 ## Limitations
