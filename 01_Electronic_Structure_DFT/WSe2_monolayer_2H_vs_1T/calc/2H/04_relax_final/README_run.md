@@ -1,7 +1,4 @@
-Purpose:
-Final structural relaxation using converged ENCUT
-and k-point mesh parameters.
+Performs a final structural relaxation using converged ENCUT
+and k-point mesh parameters to obtain the production geometry
 
-Notes:
-The optimized structure from this step was used
-as the reference geometry for DOS and band structure calculations.
+used for DOS and band structure calculations.
