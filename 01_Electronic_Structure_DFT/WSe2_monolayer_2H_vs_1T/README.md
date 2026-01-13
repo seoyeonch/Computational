@@ -16,15 +16,15 @@ and to establish a reproducible DFT calculation pipeline for 2D materials.
 ## Key Results
 
 ### Band Structures
-![2H band](figures/band_2H.png)
-![1T band](figures/band_1T.png)
+![2H band](figures/band_2H.svg)
+![1T band](figures/band_1T.svg)
 
 - The 2H phase exhibits a semiconducting band structure.
 - The 1T phase shows metallic behavior with bands crossing the Fermi level.
 
 ### Density of States
-![2H DOS](figures/dos_2H.png)
-![1T DOS](figures/dos_1T.png)
+![2H DOS](figures/dos_2H.svg)
+![1T DOS](figures/dos_1T.svg)
 
 The qualitative difference between the two phases is clearly reflected
 in the density of states near the Fermi level.
@@ -68,11 +68,12 @@ Extracted convergence data are provided in:
 Minimal input files required to reproduce the calculations are organized in the `calc/` directory.
 
 Recommended execution order for each phase:
-1. `01_relax/` – structural relaxation
+1. `01_relax_initial/` – initial structural relaxation
 2. `02_econv/` – cutoff energy convergence
 3. `03_kconv/` – k-point convergence
-4. `04_dos/` – density of states calculation
-5. `05_band/` – band structure along high-symmetry k-paths
+4. `04_relax_final/` – final structural relaxation
+5. `05_dos/` – density of states calculation
+6. `06_band/` - band structure along high-symmetry k-paths
 
 Large binary output files (e.g., WAVECAR, CHGCAR, POTCAR) are excluded from the repository.
 
