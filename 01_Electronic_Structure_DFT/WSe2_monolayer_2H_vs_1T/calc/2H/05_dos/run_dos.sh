@@ -19,8 +19,6 @@ module add mkl/2023.1.0
 module add mpi/2021.12.1
 module add VASP/basic_tools
 #===============================================================================
-cp cont.eq POSCAR; cp CHG.eq CHGCAR
-cp INCAR.dos INCAR; cp KPT.dos KPOINTS
 
 mpirun -np $SLURM_NTASKS $VASP > stdout
 
