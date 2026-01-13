@@ -37,6 +37,16 @@ and physical interpretation of results.
 
 ---
 
+## Repository Structure
+The repository is organized by research themes and methodologies.
+Currently, the primary focus is on electronic structure calculations
+(01_Electronic_Structure_DFT), which contains fully developed projects
+on bulk Si and monolayer WSe₂.
+
+Other sections (02, 03, 60, 80, 99) are reserved for future expansion
+(e.g., advanced methods, machine learning, and exploratory notes)
+and are intentionally kept minimal at this stage.
+
 ## Technical Skills
 - **DFT codes**: VASP
 - **Simulation methods**: electronic structure, structural relaxation, DOS, band structure
