@@ -1,7 +1,4 @@
-Purpose:
-Electronic band structure calculation along high-symmetry k-paths
+Calculates the electronic band structure along high-symmetry k-point paths
 using the fully relaxed structure.
 
-Notes:
-The band structure was analyzed to identify
-the qualitative electronic character of the system.
+The results are used to identify the qualitative electronic character of the system.
