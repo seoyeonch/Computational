@@ -57,6 +57,11 @@ Systematic convergence tests were performed prior to production calculations:
 - **k-point convergence**:  
   Total energy convergence within ~1 meV/atom for k-mesh ≥ XX × XX × 1.
 
+Note: Convergence tests (ENCUT and k-point mesh) were first performed
+on the initial structure to determine stable computational parameters,
+followed by a final structural relaxation using those parameters
+prior to DOS and band structure calculations.
+
 Extracted convergence data are provided in:
 - `data/econv.csv`
 - `data/kconv.csv`
