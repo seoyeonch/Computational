@@ -1,7 +1,3 @@
-Purpose:
-Density of states calculation using the fully relaxed structure
-and converged computational parameters.
-
-Notes:
-A dense k-point mesh was employed
-to obtain a smooth and reliable DOS near the Fermi level.
+Performs a final structural relaxation using converged ENCUT
+and k-point mesh parameters to obtain the production geometry
+used for DOS and band structure calculations.
