@@ -1,5 +1,11 @@
 # Structural Relaxation of Bulk Silicon
 
+
+Performs a final structural relaxation using converged ENCUT and k-point mesh parameters to obtain the production geometry.
+
+This optimized structure is used for subsequent DOS and band structure calculations.
+
+
 Structural relaxation was automated to ensure stability.
 Variable-cell and fixed-cell relaxations were performed sequentially,
 with convergence monitored through ionic step counts.
