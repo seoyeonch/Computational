@@ -156,7 +156,7 @@
 </g>
 <path fill="none" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="10 20" stroke-miterlimit="3.8" d="M 2181.015625 1600 L 2181.015625 4458.984375 " transform="matrix(0, 0.1, 0.1, 0, 0, 0)"/>
 <path fill="none" stroke-width="10" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="3.8" d="M 701.015625 1600 L 5140 1600 L 5140 4458.984375 L 701.015625 4458.984375 Z M 701.015625 1600 " transform="matrix(0, 0.1, 0.1, 0, 0, 0)"/>
-<path fill="none" stroke-width="10" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="3.8" d="M 7340 3133.007812 L 1176.015625 3133.007812 " transform="matrix(0, 0.1, 0.1, 0, 0, 0)"/>
+<path fill="none" stroke-width="10" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="3.8" d="M 5138.984375 3133.007812 L 700 3133.007812 " transform="matrix(0, 0.1, 0.1, 0, 0, 0)"/>
 <g fill="rgb(0%, 0%, 0%)" fill-opacity="1">
 <use xlink:href="#glyph-2-1" x="85.6699" y="350.285"/>
 <use xlink:href="#glyph-2-2" x="85.6699" y="336.945"/>
