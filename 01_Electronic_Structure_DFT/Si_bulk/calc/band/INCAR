@@ -1,0 +1,42 @@
+ SYSTEM = Si_bulk
+ Starting parameters for this run:
+   NWRITE =      2    write-flag
+   ISTART =      0    job   : 0-new, 1-cont, 2-samecut
+   ICHARG =     11    charge: 0-wave, 1-file, 2-atom, >10-const
+   INIWAV =      1    electr: 0-lowe 1-rand  2-diag
+
+ Electronic Relaxation:
+   ENCUT  = 400
+   PREC   = normal    normal | accurate ; low | medium | high
+   ADDGRID = .TRUE.
+   GGA_COMPAT = .FALSE.
+
+   NELMDL =      0    number of delayed ELM steps
+   NELM   =    100    number of ELM steps
+   NELMIN =      4    min number of ELM steps
+   EDIFF  =  1E-07    energy stopping-criterion for ELM
+   LREAL  =  .FALSE.  real-space projection (.FALSE., .TRUE., On, Auto)
+   ALGO   =  Normal
+   NBANDS =  20
+
+   LCHARG = .FALSE.
+   LWAVE  = .FALSE.
+   LVTOT  = .FALSE.
+   LORBIT =     10    (0 simple, 1 ext, 2 COOP (PROOUT))
+
+ Ionic Relaxation:
+   NSW    =     0     max number of geometry steps
+   IBRION =     2     ionic relax: 0-MD, 1-quasi-Newton, 2-CG, 3-Damped MD
+   EDIFFG =    -0.001 force (eV/A) stopping-criterion for geometry steps
+   ISIF   =     1     (4:force=y stress=y ions=y shape=y volume=n)
+   ISYM   =     2     (0-no sym, 1-use sym, 2-fast sym)
+   POTIM  =     0.20  initial time step for geo-opt (increase for soft sys)
+
+ DOS related values:
+#  NEDOS  =  1501
+   ISMEAR =    -1     (-1-Fermi, 1-Methfessel/Paxton)
+   SIGMA  =     0.02   broadening in eV
+
+ Parallelization flags:
+   NPAR   = 1
+   LPLANE = .TRUE.
