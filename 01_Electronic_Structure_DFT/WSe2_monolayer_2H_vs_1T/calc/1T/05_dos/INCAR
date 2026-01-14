@@ -1,4 +1,4 @@
-SYSTEM = 1T-WSe2
+ SYSTEM = 1T-WSe2
  Starting parameters for this run:
    NWRITE =      2    write-flag
    ISTART =      0    job   : 0-new, 1-cont, 2-samecut
@@ -34,9 +34,9 @@ SYSTEM = 1T-WSe2
    POTIM  =     0.20  initial time step for geo-opt (increase for soft sys)
 
  DOS related values:
-   ISMEAR =    1     (-1-Fermi, 1-Methfessel/Paxton)
-   SIGMA  =     0.1   broadening in eV
-   NEDOS  =  3000
+   ISMEAR =    -1     (-1-Fermi, 1-Methfessel/Paxton)
+   SIGMA  =     0.02   broadening in eV
+   NEDOS  =  1501
 
  Parallelization flags:
    NPAR   = 1
