@@ -1,7 +1,7 @@
 #!/bin/bash
 # k-point convergence test
 
-for (( k = 4; k <= 40; k = k + 4 )); do
+for (( k = 4; k <= 20; k = k + 4 )); do
   kpt=$k
   if (( k < 10 )); then
      kpt=0$k
