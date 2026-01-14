@@ -1,5 +1,10 @@
 # Structural Relaxation of Bulk Silicon
 
+Structural relaxation was automated to ensure stability.
+Variable-cell and fixed-cell relaxations were performed sequentially,
+with convergence monitored through ionic step counts.
+Only the final relaxed structure was used for production calculations.
+
 Structural relaxation was performed in two stages:
 
 1. **Variable-cell relaxation (ISIF = 3)**  
