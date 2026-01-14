@@ -19,9 +19,9 @@
    ALGO   =  Normal
 #  NBANDS =  20
 
-   LCHARG = .FALSE.
+   LCHARG = .TRUE.
    LWAVE  = .FALSE.
-   LVTOT  = .FALSE.
+   LVTOT  = .TRUE.
 #  LORBIT =     10    (0 simple, 1 ext, 2 COOP (PROOUT))
 
  Ionic Relaxation:
