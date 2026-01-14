@@ -1,0 +1,9 @@
+X-G-L in fcc BZ (bcc)
+41
+Line-mode
+rec
+ 0.0 0.5 0.5  ! X
+ 0.0 0.0 0.0  ! Gamma
+
+ 0.0 0.0 0.0  ! Gamma
+ 0.5 0.5 0.5  ! L
