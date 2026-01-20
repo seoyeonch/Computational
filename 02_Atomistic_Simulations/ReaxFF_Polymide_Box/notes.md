@@ -1,5 +1,11 @@
 # Notes: ReaxFF MD Simulation of a Polyimide Box
 
+The simulation workflow was developed while learning LAMMPS and ReaxFF
+under the guidance of my advisor.
+Based on provided examples and references, I modified input scripts,
+performed test runs, and verified the stability of the system through
+visual inspection and basic observables.
+
 ## What I Did
 I performed classical molecular dynamics simulations of a polyimide system
 using LAMMPS with a ReaxFF force field (CHON-2019).
