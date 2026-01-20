@@ -1,0 +1,72 @@
+# SCRIPT 2: DEFORMATION
+# This script reads the pre-equilibrated system and performs the tensile test.
+# You can run this script many times with different parameters.
+
+# Initialization
+units            real
+boundary         p p p
+
+# Potentials (must be the same as the equilibration run)
+atom_style       full
+bond_style       class2
+angle_style      quartic
+dihedral_style   fourier
+special_bonds    lj/coul 0.0 0.0 0.5
+pair_style       lj/class2/coul/long 12.0 12.0
+pair_modify      mix sixthpower tail yes
+kspace_style     pppm 1.0e-4
+
+# Reading the EQUILIBRATED data file
+# This file already contains the relaxed positions and velocities.
+read_data        equilibrated_pvdf.data
+
+# Neighbor settings
+neighbor         2.0 bin
+neigh_modify     every 2 delay 10 check yes
+
+# ----------------------------------------------------------------
+# Stage 3: Mechanical Deformation (NVT Tensile Test)
+# ----------------------------------------------------------------
+
+print "--- Starting NVT Deformation at 300K ---"
+timestep         1.0
+
+# --- Force the evaluation of the initial box length ---
+variable L0_tmp equal lx
+run 0
+variable L0 equal ${L0_tmp}
+
+# --- Define Deformation Parameters ---
+variable erate equal 1e-5
+variable strain equal "(lx - v_L0)/v_L0"
+
+# --- Setup Simulation Fixes ---
+reset_timestep 0
+fix DEFORM_NVT all nvt temp 300.0 300.0 100.0
+fix DEFORM all deform 1 x erate ${erate} units box remap v
+
+# Define the molecule group to analyze
+group            PVDF molecule 1
+# Define the molecule as a "chunk" for calculations
+compute          CHUNK PVDF chunk/atom molecule
+
+# Calculate Radius of Gyration (Rg) and write to a new file
+compute          GYR PVDF gyration/chunk CHUNK
+fix              FGYR PVDF ave/time 1000 1 1000 c_GYR file gyration_deform.out mode vector
+
+# Calculate Dipole Moment and write to a new file
+compute          DPL PVDF dipole/chunk CHUNK
+fix              FDPL PVDF ave/time 1000 1 1000 c_DPL[*] file dipole_deform.out mode vector
+
+# --- Define Data Output for Stress-Strain Curve ---
+thermo 1000
+thermo_style custom step temp v_strain pxx pyy pzz lx ly lz
+dump		DEFORM_DUMP all custom 500 deform.lammpstrj id mol type xu yu zu
+dump_modify	DEFORM_DUMP sort id
+
+
+# --- Run the Deformation ---
+run 100000
+
+print "Deformation complete."
+
