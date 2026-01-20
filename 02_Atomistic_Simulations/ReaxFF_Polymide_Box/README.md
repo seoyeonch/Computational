@@ -4,6 +4,10 @@ simulation of a polyimide box performed using LAMMPS with a ReaxFF force field.
 This project is included to demonstrate familiarity with MD workflows
 and force-field-based atomistic simulations.
 
+This workflow was constructed while learning LAMMPS and ReaxFF
+under faculty supervision, and was gradually modified and validated
+through test simulations and trajectory inspection.
+
 ## Method
 - Code: LAMMPS
 - Force field: ReaxFF (CHON-2019)
