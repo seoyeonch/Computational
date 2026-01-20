@@ -1,0 +1,58 @@
+# SCRIPT 1: EQUILIBRATION
+# This script performs minimization and NVT equilibration, then saves the result.
+# Run this script only ONCE to prepare your system.
+
+# Initialization
+units            real
+boundary         p p p
+
+# Potentials
+atom_style       full
+bond_style       class2
+angle_style      quartic
+dihedral_style   fourier
+special_bonds    lj/coul 0.0 0.0 0.5
+pair_style       lj/class2/coul/long 12.0 12.0
+pair_modify      mix sixthpower tail yes
+kspace_style     pppm 1.0e-4
+
+# Reading of the initial, un-relaxed data file
+read_data        PVDF-1C-100M_IFF.lmp
+
+# Neighbor settings
+neighbor         2.0 bin
+neigh_modify     every 2 delay 10 check yes
+
+# ----------------------------------------------------------------
+# Stage 1: Energy Minimization
+# ----------------------------------------------------------------
+print "--- Starting Energy Minimization ---"
+min_style fire
+minimize 1.0e-5 1.0e-8 100000 1000000
+print "--- Minimization Complete ---"
+
+# ----------------------------------------------------------------
+# Stage 2: NVT Equilibration
+# ----------------------------------------------------------------
+print "--- Starting NVT Equilibration at 300K ---"
+reset_timestep   0
+timestep         1.0
+
+# Assign initial velocities and run NVT
+velocity all create 300.0 4928459 rot yes dist gaussian
+fix          NVT_EQUIL all nvt temp 300.0 300.0 100.0
+thermo       1000
+thermo_style custom step temp press etotal lx
+run          100000  # A reasonable equilibration time
+print "--- NVT Equilibration Complete ---"
+
+# ----------------------------------------------------------------
+# Stage 3: Save the Final Equilibrated State
+# ----------------------------------------------------------------
+# This is the crucial step. It writes the final atom coordinates,
+# velocities, and box information to a new data file.
+print "--- Writing equilibrated data file... ---"
+write_data       equilibrated_pvdf.data
+
+print "All done. System saved to equilibrated_pvdf.data"
+
