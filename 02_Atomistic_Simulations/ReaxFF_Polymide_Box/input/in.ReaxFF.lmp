@@ -1,0 +1,109 @@
+units			real
+boundary    		p p p
+
+atom_style		charge
+variable    	        sname string box-polyImide-PI-10M-1-4
+variable		wout  string fire
+variable                watoms string all
+variable 		vatoms string all
+
+read_data		data.box-polyImide-PI-10M-1-4
+
+pair_style		reaxff NULL safezone 2.0 mincap 200
+pair_coeff		* * CHON-2019.ff H C N O
+neighbor		2 bin
+neigh_modify		every 2 delay 10 check yes page 200000 one 20000
+
+compute 		reax all pair reaxff #extrae información de las energías y las interacciones
+variable 		eb equal c_reax[1]
+variable 		ea equal c_reax[2]
+variable 		elp equal c_reax[3]
+variable 		emol equal c_reax[4]
+variable 		ev equal c_reax[5]
+variable 		epen equal c_reax[6]
+variable 		ecoa equal c_reax[7]
+variable 		ehb equal c_reax[8]
+variable 		et equal c_reax[9]
+variable 		eco equal c_reax[10]
+variable 		ew equal c_reax[11]
+variable 		ep equal c_reax[12]
+variable 		efi equal c_reax[13]
+variable 		eqeq equal c_reax[14]
+
+thermo 			10
+thermo_style 		custom step ebond eangle edihed evdwl ecoul elong pe ke etotal temp press vol density
+
+fix                     1 all qeq/reax 1 0 10.0 1.0e-6 reaxff maxiter 1000 # equilibrio de cargas durante cada paso
+fix 			species all reaxff/species 10 10 100 species.out cutoff * * 0.30
+
+timestep             0.1
+
+print                          .
+print ==========================================
+print "Minimization"
+print ==========================================
+print                          .
+
+thermo           	10
+thermo_style     	custom step ebond eangle edihed evdwl ecoul elong pe ke etotal
+dump		 	1 all custom 1000 ${sname}-min.lammpstrj id type xu yu zu
+dump_modify      	1 sort id
+min_style        	${wout} 		#fire
+minimize         	0.0 0.0 1000000 10000000
+minimize         	0.0 0.0 1000000 10000000
+
+min_style        	cg
+minimize         	0.0 0.0 10000 100000
+
+undump			1
+
+write_data       	data.${sname}-min.lmp
+
+print				.
+print ==========================================
+print "NVE dynamics with Langevin thermostat"
+print ==========================================
+print                		.
+                     
+timestep             	0.01
+                     
+fix                  	2 all nve
+velocity             	all create 0.0 12345678 dist uniform
+thermo               	100
+thermo_style         	multi
+restart             	10 ${sname}_heat.restart1 ${sname}_heat.restart2
+
+variable           	l loop 10 #number of increments
+variable           	i index 30 #temp increments
+                     
+label                	loop
+variable             	t equal v_l*$i # temperature this loop
+print                	"temperature: $t"
+fix                  	4 all langevin $t $t 100.0 834729
+dump               	2 all atom 10 ${sname}_heat-${t}.lammpstrj
+dump_modify        	2 image yes scale yes
+run                  	1000
+undump               	2
+unfix                	4
+next                 	l
+jump                 	in.annealing-polyImide-ReaxFF loop
+unfix                	2
+
+write_data       	data.${sname}-Langevin.lmp
+                     
+print                		.
+print =====================================
+print "10000 steps NVT dynamics at 300K"
+print =====================================
+print                		.
+                     
+fix                  	2 all nvt temp 300.0 300.0 250.0
+restart              	10 ${sname}_nvt.restart1 ${sname}_nvt.restart2
+dump                 	3 all atom 100 ${sname}_nvt.lammpstrj
+dump_modify          	3 image yes scale yes
+run                  	10000
+unfix                	2
+undump               	3
+
+write_data       	data.${sname}-nvt-300K.lmp
+
