@@ -9,9 +9,10 @@ WSe₂ is a representative 2D transition metal dichalcogenide (TMD) with strong 
 ## Methodology
 - DFT code: VASP
 - Exchange–correlation functional: PBE
-- Plane-wave cutoff energy (ENCUT): 400–600 eV
-- k-point mesh: 6×6×1 to 15×15×1
-- Vacuum thickness: 20 Å
+- Plane-wave cutoff energy (ENCUT): 200–900 eV
+- k-point mesh: 4×4×1 to 40×40×1
+- Cell height (z): 23.34 Å  
+- Vacuum spacing: ~20 Å
 - Convergence criteria:
   - Total energy: 1 meV/atom
   - Force: 0.01 eV/Å
