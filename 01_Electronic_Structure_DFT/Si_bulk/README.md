@@ -10,8 +10,8 @@ Its well-known experimental band structure and lattice constant make it an ideal
 ## Methodology
 - DFT code: VASP
 - Exchange–correlation functional: PBE
-- Plane-wave cutoff energy (ENCUT): 300–600 eV
-- k-point mesh: 4×4×4 to 12×12×12
+- Plane-wave cutoff energy (ENCUT): 200–900 eV
+- k-point mesh: 4×4×4 to 20×20x20
 - Crystal structure: Diamond cubic
 - Convergence criteria:
   - Total energy: 1 meV/atom
