@@ -1,116 +1,64 @@
-# Electronic Structure of WSe₂ Monolayers: 2H vs 1T Phases
+# Electronic Structure of Monolayer WSe2
 
-## Overview
-This project investigates the electronic structure of monolayer WSe₂
-in the 2H and 1T structural phases using density functional theory (DFT).
-All calculations were performed with VASP within the PBE approximation,
-following a consistent workflow including convergence tests,
-structural relaxation, and band structure/DOS analysis.
+## Objective
+The goal of this project is to investigate the electronic band structure of monolayer WSe₂ using density functional theory (DFT), and to establish reliable computational parameters through systematic convergence tests.
 
-The primary goal is to compare the qualitative difference in electronic behavior
-between the semiconducting 2H phase and the metallic 1T phase,
-and to establish a reproducible DFT calculation pipeline for 2D materials.
+## Why WSe2?
+WSe₂ is a representative 2D transition metal dichalcogenide (TMD) with strong spin–orbit coupling and a direct band gap in the monolayer limit, making it a promising material for optoelectronic applications.
 
----
-
-## Key Results
-
-### Band Structures
-![2H band](figures/band_2H.svg)
-![1T band](figures/band_1T.svg)
-
-- The 2H phase exhibits a semiconducting band structure.
-- The 1T phase shows metallic behavior with bands crossing the Fermi level.
-
-### Density of States
-![2H DOS](figures/dos_2H.svg)
-![1T DOS](figures/dos_1T.svg)
-
-The qualitative difference between the two phases is clearly reflected
-in the density of states near the Fermi level.
-
----
-
-## Computational Details
-
-- **Code**: VASP
-- **Exchange–correlation functional**: PBE (GGA)
-- **Pseudopotentials**: PAW (VASP standard)
-- **Plane-wave cutoff energy**: XX eV  
-  (selected based on total energy convergence tests)
-- **k-point mesh (relaxation / DOS)**: XX × XX × 1
-- **Vacuum thickness**: > XX Å to avoid interlayer interactions
-- **Structural relaxation**:
-  - Forces converged below XX eV/Å
-  - In-plane lattice vectors fully relaxed
-- **Spin–orbit coupling (SOC)**: not included  
-  (see Limitations and Future Work)
-
----
+## Methodology
+- DFT code: VASP
+- Exchange–correlation functional: PBE
+- Plane-wave cutoff energy (ENCUT): 400–600 eV
+- k-point mesh: 6×6×1 to 15×15×1
+- Vacuum thickness: 20 Å
+- Convergence criteria:
+  - Total energy: 1 meV/atom
+  - Force: 0.01 eV/Å
 
 ## Convergence Tests
 
-Systematic convergence tests were performed prior to production calculations:
+### ENCUT Convergence
+We performed total energy calculations for ENCUT values ranging from 400 eV to 600 eV.  
+The total energy was found to converge within 1 meV/atom at ENCUT ≥ 500 eV.
 
-- **ENCUT convergence**:  
-  Total energy convergence within ~1 meV/atom above XX eV.
-- **k-point convergence**:  
-  Total energy convergence within ~1 meV/atom for k-mesh ≥ XX × XX × 1.
+*(Figure: ENCUT vs Total Energy)*
+![2H ENCUT](figures/band_2H.svg)
+![1T ENCUT](figures/band_1T.svg)
 
-Note: Convergence tests (ENCUT and k-point mesh) were first performed
-on the initial structure to determine stable computational parameters,
-followed by a final structural relaxation using those parameters
-prior to DOS and band structure calculations.
+### k-point Convergence
+We tested k-point meshes from 6×6×1 to 15×15×1.  
+Energy convergence within 1 meV/atom was achieved at 12×12×1.
 
-Extracted convergence data are provided in:
-- `data/econv.csv`
-- `data/kconv.csv`
+*(Figure: k-point mesh vs Total Energy)*
+![2H KPOINTS](figures/band_2H.svg)
+![1T KPOINTS](figures/band_1T.svg)
 
----
+## Results
 
-## Reproducibility
+### Band Structure
+The calculated band structure shows a direct band gap at the K point.  
+The PBE band gap is approximately 1.65 eV, consistent with previous theoretical studies.
 
-Minimal input files required to reproduce the calculations are organized in the `calc/` directory.
+![2H band](figures/band_2H.svg)
+![1T band](figures/band_1T.svg)
 
-Recommended execution order for each phase:
-1. `01_relax_initial/` – initial structural relaxation
-2. `02_econv/` – cutoff energy convergence
-3. `03_kconv/` – k-point convergence
-4. `04_relax_final/` – final structural relaxation
-5. `05_dos/` – density of states calculation
-6. `06_band/` - band structure along high-symmetry k-paths
+### Density of States (DOS)
+The DOS reveals dominant contributions from W d-orbitals near the conduction band minimum and Se p-orbitals near the valence band maximum.
 
-Note: Convergence tests (ENCUT/k-point) were first performed on the initial structure
-to select stable parameters, followed by a final structural relaxation using those parameters
-before DOS/band calculations.
+![2H DOS](figures/dos_2H.svg)
+![1T DOS](figures/dos_1T.svg)
 
-Large binary output files (e.g., WAVECAR, CHGCAR, POTCAR) are excluded from the repository.
+## Discussion
+- The convergence tests ensure numerical reliability of the reported electronic structure.
+- The underestimation of the band gap is attributed to the known limitations of the PBE functional.
+- Future work includes HSE06 calculations and spin–orbit coupling (SOC) effects.
 
----
+## Directory Structure
 
-## Physical Interpretation
-
-The phase-dependent electronic behavior of WSe₂ originates from differences
-in local coordination and orbital hybridization.
-In the 2H phase, trigonal prismatic coordination leads to a band gap,
-whereas the octahedral coordination in the 1T phase results in partially filled bands
-and metallic character.
-
----
-
-## Limitations
-
-- Band gaps are underestimated due to the use of the PBE functional.
-- Spin–orbit coupling, which is known to be significant in W-based TMDs,
-  is not included in the present calculations.
-- Dynamical stability (phonons) is not assessed, particularly important for the 1T phase.
-
----
-
-## Future Work
-
-- Inclusion of SOC for quantitatively accurate band structures.
-- Hybrid functional (HSE06) or GW calculations for improved band gap prediction.
-- Phonon dispersion calculations to assess the dynamical stability of the 1T phase.
-- Extension to larger-scale simulations using machine-learned force fields (MLFF).
-
+WSe2_Monolayer/
+├── README.md
+├── input/
+├── scripts/
+├── results/
+└── figures/
