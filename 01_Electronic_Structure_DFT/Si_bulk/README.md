@@ -30,6 +30,7 @@ We tested Monkhorst–Pack k-point meshes from 4×4×4 to 12×12×12.
 Energy convergence within 1 meV/atom was achieved at 8×8×8.
 
 *(Figure: k-point mesh vs Total Energy)*
+![KPOINTS](figures/kconv.svg)
 
 ## Results
 
@@ -37,17 +38,20 @@ Energy convergence within 1 meV/atom was achieved at 8×8×8.
 The optimized lattice constant obtained from total energy minimization is approximately 5.43 Å, which is in good agreement with the experimental value (~5.43 Å).
 
 *(Figure: Total Energy vs Lattice Constant)*
+![ENCUT](figures/econv.svg)
 
 ### Band Structure
 The calculated band structure shows an indirect band gap with the valence band maximum at Γ and the conduction band minimum near the X point.  
 The PBE band gap is approximately 0.6 eV, which underestimates the experimental value (~1.1 eV), as expected for semi-local functionals.
 
 *(Figure: Band structure plot)*
+![BAND](figures/band.svg)
 
 ### Density of States (DOS)
 The DOS indicates dominant contributions from Si p-orbitals near the valence band maximum and Si s-orbitals near the conduction band minimum.
 
 *(Figure: DOS plot)*
+![DOS](figures/dos.svg)
 
 ## Discussion
 - The convergence tests ensure numerical reliability of the reported electronic structure.
