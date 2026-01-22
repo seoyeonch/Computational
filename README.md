@@ -130,6 +130,19 @@ condensed matter physics** and **first-principles materials modeling**.
 
 ---
 
+## Future Directions
+
+Directory: `99_Future_Work/`
+
+This section outlines natural next steps extending the calculations
+presented in this portfolio, including beyond-DFT methods, lattice
+dynamics, and finite-temperature effects.
+
+These directions reflect awareness of methodological limitations and
+are intended as conceptual extensions under graduate-level supervision.
+
+---
+
 ## Reproducibility
 
 For each project, only minimal reproducible input files are provided.
