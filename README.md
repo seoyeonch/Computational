@@ -100,22 +100,6 @@ than black-box usage of simulation codes.
 
 ---
 
-## Background
-
-- Undergraduate student, Department of Applied Physics, Sookmyung Women’s University  
-- Completed coursework in:
-  - Solid State Physics, Quantum Mechanics, Semiconductor Physics  
-  - Thermodynamics, Phase Equilibria, Advanced Materials  
-  - Electromagnetism, Classical Mechanics  
-
-- Research experience:
-  - Member of Computational Nano-Physics Laboratory  
-  - Hands-on experience with VASP and LAMMPS  
-  - Short programs: Semiconductor Process Practice, Quantum Information Winter School,
-    Deep Learning Autonomous Driving Program  
-
----
-
 ## Research Interests
 
 My current interests include:
