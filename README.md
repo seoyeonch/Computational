@@ -1,61 +1,154 @@
-# Computational Condensed Matter Physics Portfolio
+# Computational Condensed Matter Portfolio
 
 ## Overview
-This repository documents my hands-on experience in computational condensed matter physics,
-with a primary focus on density functional theory (DFT) calculations for electronic structure analysis.
-The projects are organized to emphasize reproducible workflows, convergence testing,
-and physical interpretation of results.
+This repository presents selected computational physics projects conducted
+during my undergraduate studies in Applied Physics.
+My primary research focus is on **DFT-based electronic structure calculations**
+for condensed matter and low-dimensional materials, with supplementary
+experience in atomistic simulations and machine-learned force fields.
 
-## Research Focus
-- Density Functional Theory (DFT) for electronic structure calculations
-- Convergence testing and reproducible computational workflows
-- Electronic properties of bulk and low-dimensional materials
-- Extension toward molecular dynamics and machine-learned force fields
-
-## Primary Projects
-
-### 1. WSe₂ Monolayer (2H vs 1T)
-**DFT-based electronic structure comparison of structural phases**
-
-- Systematic ENCUT and k-point convergence tests
-- Structural relaxation and electronic structure analysis (DOS, band structure)
-- Qualitative comparison of semiconducting (2H) and metallic (1T) phases
-- Discussion of limitations and future extensions (SOC, phonons)
-
-📂 `01_Electronic_Structure_DFT/WSe2_monolayer_2H_vs_1T`
+This portfolio is intended to demonstrate:
+- Practical experience with first-principles calculations (VASP)
+- Understanding of electronic structure workflows and convergence strategies
+- Familiarity with atomistic simulations beyond DFT (MD, MLFF)
+- Emphasis on reproducibility, methodological clarity, and physical interpretation
 
 ---
 
-### 2. Bulk Silicon
-**Reference DFT calculation for workflow validation**
+## Primary Research Focus
 
-- Convergence testing and structural relaxation
-- Band structure and DOS analysis of a prototypical semiconductor
-- Used as a baseline to validate computational settings
+### 1. Electronic Structure Calculations (DFT)
 
-📂 `01_Electronic_Structure_DFT/Si_bulk`
+Directory: `01_Electronic_Structure_DFT/`
+
+Main projects include:
+
+- **Si bulk: band structure and density of states**  
+  - Convergence tests (ENCUT, k-mesh)  
+  - Structural relaxation  
+  - Electronic band structure and DOS analysis  
+
+- **WSe₂ monolayer: 2H vs 1T phases**  
+  - Systematic convergence workflow  
+  - Structural relaxation of both phases  
+  - Band structure and DOS comparison  
+  - Qualitative analysis of phase-dependent electronic behavior  
+
+These projects constitute my primary research track and reflect my main
+interest in electronic structure theory and first-principles modeling.
 
 ---
 
-## Repository Structure
-The repository is organized by research themes and methodologies.
-Currently, the primary focus is on electronic structure calculations
-(01_Electronic_Structure_DFT), which contains fully developed projects
-on bulk Si and monolayer WSe₂.
+## Supporting Computational Experience
 
-Other sections (02, 03, 60, 80, 99) are reserved for future expansion
-(e.g., advanced methods, machine learning, and exploratory notes)
-and are intentionally kept minimal at this stage.
+### 2. Atomistic Simulations (MD with LAMMPS)
 
-## Technical Skills
-- **DFT codes**: VASP
-- **Simulation methods**: electronic structure, structural relaxation, DOS, band structure
-- **Related tools**: LAMMPS (introductory MD experience)
-- **Scripting**: Bash (job execution, data extraction)
-- **Post-processing**: data analysis and visualization for electronic structure
+Directory: `02_Atomistic_Simulations/`
 
-## Notes on Reproducibility
-All projects follow a consistent directory structure
-(`relax → convergence → production → analysis`)
-with minimal input files tracked for reproducibility.
-Large binary outputs and licensed files are intentionally excluded.
+This section contains supplementary molecular dynamics examples included to
+demonstrate familiarity with classical atomistic workflows.
+
+- **ReaxFF Polyimide Box**  
+  Reactive MD using ReaxFF (C–H–O–N parameter set, J. Phys. Chem. B 2019)  
+  - Energy minimization and annealing  
+  - NVT / NPT equilibration  
+  - Charge equilibration and qualitative stability checks  
+
+- **PVDF Polymer MD Workflow**  
+  Classical polymer MD using Interface Force Field (IFF)  
+  - Multi-stage equilibration (NVT → NPT)  
+  - Long-range electrostatics (PPPM) and SHAKE constraints  
+  - Controlled deformation workflow  
+
+These examples are included as **supplementary experience** and are not the
+primary focus of my research portfolio.
+
+---
+
+### 3. Ab Initio Molecular Dynamics (VASP AIMD)
+
+Directory: `01_Electronic_Structure_DFT/AIMD_Si_bulk/`
+
+This project demonstrates a basic ab initio molecular dynamics workflow
+for Si bulk based on official VASP tutorials, using NVT ensemble MD.
+
+This section summarizes my exploration of VASP’s machine-learned force field
+framework, including:
+
+- Reading and studying the theoretical foundations of MLFF  
+- Following official VASP tutorials (molecules, bulk, MD, MLFF)  
+- Understanding training workflows and practical limitations  
+
+This track reflects my interest in extending first-principles methods to
+larger-scale simulations.
+
+---
+
+## Methodological Notes
+
+Directory: `60_Methodological_Notes/`
+
+This directory contains short notes documenting:
+
+- Convergence strategies and parameter selection  
+- Practical limitations of standard DFT (e.g., band gap underestimation)  
+- Assumptions behind classical force fields and MD  
+- Theoretical background and limitations of machine-learned force fields  
+
+These notes reflect my emphasis on **methodological understanding** rather
+than black-box usage of simulation codes.
+
+---
+
+## Background
+
+- Undergraduate student, Department of Applied Physics, Sookmyung Women’s University  
+- Completed coursework in:
+  - Solid State Physics, Quantum Mechanics, Semiconductor Physics  
+  - Thermodynamics, Phase Equilibria, Advanced Materials  
+  - Electromagnetism, Classical Mechanics  
+
+- Research experience:
+  - Member of Computational Nano-Physics Laboratory  
+  - Hands-on experience with VASP and LAMMPS  
+  - Short programs: Semiconductor Process Practice, Quantum Information Winter School,
+    Deep Learning Autonomous Driving Program  
+
+---
+
+## Research Interests
+
+My current interests include:
+
+- Electronic structure of low-dimensional materials  
+- Phase stability and electronic properties of 2D semiconductors  
+- Beyond-DFT methods (hybrid functionals, GW, phonons)  
+- Machine-learned interatomic potentials for large-scale simulations  
+
+I am particularly interested in pursuing graduate studies in **computational
+condensed matter physics** and **first-principles materials modeling**.
+
+---
+
+## Reproducibility
+
+For each project, only minimal reproducible input files are provided.
+Large binary outputs (e.g., WAVECAR, CHGCAR, trajectories, restart files)
+are intentionally excluded.
+
+Each directory contains:
+- Input files  
+- Brief README explaining the workflow  
+- Notes describing assumptions and limitations  
+
+---
+
+## Contact
+
+This repository is maintained as part of my graduate school application
+portfolio.
+
+For further information or questions regarding the calculations, please feel
+free to contact me.
+
+---
