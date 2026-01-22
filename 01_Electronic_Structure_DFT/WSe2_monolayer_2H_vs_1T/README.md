@@ -22,7 +22,6 @@ WSe₂ is a representative 2D transition metal dichalcogenide (TMD) with strong 
 We performed total energy calculations for ENCUT values ranging from 400 eV to 600 eV.  
 The total energy was found to converge within 1 meV/atom at ENCUT ≥ 500 eV.
 
-*(Figure: ENCUT vs Total Energy)*
 ![2H ENCUT](figures/econv_2H.svg)
 ![1T ENCUT](figures/econv_1T.svg)
 
@@ -30,7 +29,6 @@ The total energy was found to converge within 1 meV/atom at ENCUT ≥ 500 eV.
 We tested k-point meshes from 6×6×1 to 15×15×1.  
 Energy convergence within 1 meV/atom was achieved at 12×12×1.
 
-*(Figure: k-point mesh vs Total Energy)*
 ![2H KPOINTS](figures/kconv_2H.svg)
 ![1T KPOINTS](figures/kconv_1T.svg)
 
