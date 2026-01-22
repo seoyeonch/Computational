@@ -68,7 +68,6 @@ Bulk_Si/
 1. Prepare input files in `input/`
 2. Run ENCUT convergence tests
 3. Run k-point convergence tests
-4. Optimize lattice constant
-5. Run SCF calculation
-6. Run band structure and DOS calculations
-7. Post-process results
+4. Run SCF calculation
+5. Run band structure and DOS calculations
+6. Post-process results
