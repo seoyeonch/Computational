@@ -56,8 +56,16 @@ The DOS reveals dominant contributions from W d-orbitals near the conduction ban
 ## Directory Structure
 
 WSe2_Monolayer/
-├── README.md
-├── input/
-├── scripts/
-├── results/
-└── figures/
+├── input/ # VASP input files 
+├── scripts/ # Automation and post-processing scripts 
+├── results/ # Raw calculation outputs 
+└── figures/ # Plots and visualizations
+
+## How to Reproduce
+
+1. Prepare input files in input/
+2. Run ENCUT convergence tests
+3. Run k-point convergence tests
+4. Run SCF calculation
+5. Run band structure and DOS calculations
+6. Post-process results
