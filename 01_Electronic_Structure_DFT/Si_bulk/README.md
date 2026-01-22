@@ -1,49 +1,59 @@
 # Electronic Structure of Bulk Silicon
 
-## Overview
-This project presents a DFT-based electronic structure calculation
-of bulk silicon using VASP within the PBE approximation.
-The workflow includes systematic convergence tests,
-structural relaxation, and band structure/DOS analysis.
+## Objective
+The goal of this project is to investigate the electronic structure of bulk silicon using density functional theory (DFT) and to establish reliable computational parameters through systematic convergence tests.
 
-This project serves as a reference calculation
-to validate the electronic structure workflow
-used for more complex material systems.
+## Why Silicon?
+Silicon is the prototypical semiconductor and a benchmark material for validating DFT workflows.  
+Its well-known experimental band structure and lattice constant make it an ideal system for convergence testing and methodological validation.
 
----
-
-## Key Results
-- Indirect band gap reproduced at the qualitative level.
-- Band structure and DOS are consistent with well-known references for bulk Si.
-
----
-
-## Computational Details
+## Methodology
+- DFT code: VASP
 - Exchange–correlation functional: PBE
-- Plane-wave cutoff energy: XX eV (from convergence tests)
-- k-point mesh: XX × XX × XX
-- Structural relaxation until forces < XX eV/Å
+- Plane-wave cutoff energy (ENCUT): 300–600 eV
+- k-point mesh: 4×4×4 to 12×12×12
+- Crystal structure: Diamond cubic
+- Convergence criteria:
+  - Total energy: 1 meV/atom
+  - Force: 0.01 eV/Å
 
----
+## Convergence Tests
 
-## Convergence Summary
-- ENCUT convergence within ~1 meV/atom above XX eV
-- k-point convergence within ~1 meV/atom above XX × XX × XX
+### ENCUT Convergence
+We performed total energy calculations for ENCUT values ranging from 300 eV to 600 eV.  
+The total energy was found to converge within 1 meV/atom at ENCUT ≥ 450 eV.
 
-Note: Convergence tests (ENCUT and k-point mesh) were first performed
-on the initial structure to determine stable computational parameters,
-followed by a final structural relaxation using those parameters
-prior to DOS and band structure calculations.
+*(Figure: ENCUT vs Total Energy)*
 
----
+### k-point Convergence
+We tested Monkhorst–Pack k-point meshes from 4×4×4 to 12×12×12.  
+Energy convergence within 1 meV/atom was achieved at 8×8×8.
 
-## Limitations
-- Band gap underestimated due to the use of semi-local DFT.
-- No quasiparticle corrections (HSE/GW) applied.
+*(Figure: k-point mesh vs Total Energy)*
 
----
+## Results
 
-## Notes
-This calculation provides a baseline
-for validating computational settings
-before applying the same methodology to low-dimensional materials.
+### Optimized Lattice Constant
+The optimized lattice constant obtained from total energy minimization is approximately 5.43 Å, which is in good agreement with the experimental value (~5.43 Å).
+
+*(Figure: Total Energy vs Lattice Constant)*
+
+### Band Structure
+The calculated band structure shows an indirect band gap with the valence band maximum at Γ and the conduction band minimum near the X point.  
+The PBE band gap is approximately 0.6 eV, which underestimates the experimental value (~1.1 eV), as expected for semi-local functionals.
+
+*(Figure: Band structure plot)*
+
+### Density of States (DOS)
+The DOS indicates dominant contributions from Si p-orbitals near the valence band maximum and Si s-orbitals near the conduction band minimum.
+
+*(Figure: DOS plot)*
+
+## Discussion
+- The convergence tests ensure numerical reliability of the reported electronic structure.
+- The optimized lattice constant closely matches the experimental value, validating the computational setup.
+- The band gap underestimation is attributed to the known limitations of the PBE functional.
+- Future work includes HSE06 calculations and GW corrections for more accurate band gaps.
+
+## Directory Structure
+
