@@ -63,17 +63,9 @@ The DOS reveals dominant contributions from W d-orbitals near the conduction ban
 - The underestimation of the band gap is attributed to the known limitations of the PBE functional.
 - Future work includes HSE06 calculations and spin–orbit coupling (SOC) effects.
 
-## Directory Structure
-
-WSe2_Monolayer/
-├── input/ # VASP input files 
-├── scripts/ # Automation and post-processing scripts 
-├── results/ # Raw calculation outputs 
-└── figures/ # Plots and visualizations
-
 ## How to Reproduce
 
-1. Prepare input files in input/
+1. Prepare input files in calc/
 2. Run ENCUT convergence tests
 3. Run k-point convergence tests
 4. Run SCF calculation
