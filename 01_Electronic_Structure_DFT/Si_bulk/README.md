@@ -61,7 +61,7 @@ The DOS indicates dominant contributions from Si p-orbitals near the valence ban
 - scripts/  : Job submission and post-processing scripts (SLURM, Python)
 - data/     : Parsed numerical outputs
 - figures/  : Final plots used for analysis and presentation
-- - logs/     : OUTCAR tail excerpts are provided (relaxation steps)
+- logs/     : OUTCAR tail excerpts are provided (relaxation steps)
 to demonstrate successful DFT calculations and HPC execution.
 
 ## How to Reproduce
