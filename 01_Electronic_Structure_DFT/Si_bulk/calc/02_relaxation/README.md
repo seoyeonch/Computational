@@ -23,8 +23,6 @@ Structural relaxation was performed in two stages:
    a final relaxation of atomic positions was performed
    to obtain the structure used for subsequent DOS and band calculations.
 
-The final relaxed structure is provided as `POSCAR_final`.
-
 Charge density and local potential outputs (CHGCAR, LOCPOT)
 were generated only in the final relaxation step.
 Intermediate relaxation steps were performed without these outputs
