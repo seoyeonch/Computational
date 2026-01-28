@@ -6,6 +6,16 @@ The goal of this project is to investigate the electronic band structure of mono
 ## Why WSe2?
 WSe₂ is a representative 2D transition metal dichalcogenide (TMD) with strong spin–orbit coupling and a direct band gap in the monolayer limit, making it a promising material for optoelectronic applications.
 
+## Key Research Outcomes
+
+Verified DFT workflow reliability through benchmark calculations on bulk silicon.
+
+Demonstrated phase-dependent electronic behavior in monolayer WSe₂:
+
+2H phase: semiconducting
+
+1T phase: metallic
+
 ## Methodology
 - DFT code: VASP
 - Exchange–correlation functional: PBE
