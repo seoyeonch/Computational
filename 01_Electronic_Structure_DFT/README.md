@@ -3,7 +3,7 @@
 ## Overview
 
 This repository contains first-principles density functional theory (DFT) studies on crystalline and low-dimensional materials, with a focus on electronic structure analysis and reproducible computational workflows.
-All calculations are performed using VASP on SLURM-based Linux HPC clusters, with post-processing and visualization conducted in Python.
+All calculations are performed using VASP on SLURM-based Linux HPC clusters, with visualization conducted in gnuplot.
 
 ---
 
