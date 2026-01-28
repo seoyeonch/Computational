@@ -1,5 +1,30 @@
+ reached required accuracy - stopping structural energy minimisation
+     LOOP+:  cpu time      9.7087: real time      9.7850
+    4ORBIT:  cpu time      0.0000: real time      0.0000
+
+ total amount of memory used by VASP MPI-rank0    38552. kBytes
+=======================================================================
+
+   base      :      30000. kBytes
+   nonl-proj :       1915. kBytes
+   fftplans  :       3395. kBytes
+   grid      :       1452. kBytes
+   one-center:         15. kBytes
+   wavefun   :       1775. kBytes
+
+
+
+ General timing and accounting informations for this job:
+ ========================================================
+
+                  Total CPU time used (sec):       11.548
                             User time (sec):       11.113
                           System time (sec):        0.436
                          Elapsed time (sec):       12.136
 
                    Maximum memory used (kb):      280268.
+                   Average memory used (kb):          N/A
+
+                          Minor page faults:        21046
+                          Major page faults:           56
+                 Voluntary context switches:         2138
