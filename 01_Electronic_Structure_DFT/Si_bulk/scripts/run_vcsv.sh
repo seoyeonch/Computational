@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -J WSe2
-#SBATCH -o WSe2.o%j
+#SBATCH -J Si_bulk
+#SBATCH -o Si_bulk.o%j
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=12
 #SBATCH --exclusive
