@@ -64,7 +64,7 @@ The DOS reveals dominant contributions from W d-orbitals near the conduction ban
 
 ## Directory Structure
 
-- calc/     : Step-by-step DFT input files (relaxation, SCF, band, DOS)
+- calc/     : Step-by-step DFT input files (convergence tests, relaxation, band, DOS)
 - scripts/  : Job submission and post-processing scripts (SLURM)
 - data/     : Parsed numerical outputs
 - figures/  : Final plots used for analysis and presentation
