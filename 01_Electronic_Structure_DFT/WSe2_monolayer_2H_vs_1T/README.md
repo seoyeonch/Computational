@@ -12,9 +12,8 @@ Verified DFT workflow reliability through benchmark calculations on bulk silicon
 
 Demonstrated phase-dependent electronic behavior in monolayer WSe₂:
 
-2H phase: semiconducting
-
-1T phase: metallic
+- 2H phase: semiconducting
+- 1T phase: metallic
 
 ## Methodology
 - DFT code: VASP
@@ -62,6 +61,13 @@ The DOS reveals dominant contributions from W d-orbitals near the conduction ban
 - The convergence tests ensure numerical reliability of the reported electronic structure.
 - The underestimation of the band gap is attributed to the known limitations of the PBE functional.
 - Future work includes HSE06 calculations and spin–orbit coupling (SOC) effects.
+
+## Directory Structure
+
+calc/     : Step-by-step DFT input files (relaxation, SCF, band, DOS)
+scripts/  : Job submission and post-processing scripts (SLURM)
+data/     : Parsed numerical outputs
+figures/  : Final plots used for analysis and presentation
 
 ## How to Reproduce
 
