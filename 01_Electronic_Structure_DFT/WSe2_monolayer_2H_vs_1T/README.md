@@ -68,6 +68,9 @@ The DOS reveals dominant contributions from W d-orbitals near the conduction ban
 - scripts/  : Job submission and post-processing scripts (SLURM)
 - data/     : Parsed numerical outputs
 - figures/  : Final plots used for analysis and presentation
+- logs/     : OUTCAR tail excerpts are provided for 2H and 1T phases (relaxation steps)
+to demonstrate successful DFT calculations and HPC execution.
+
 
 ## How to Reproduce
 
