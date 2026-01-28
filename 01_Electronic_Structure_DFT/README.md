@@ -63,7 +63,7 @@ Key Tasks:
 - Energy cutoff and k-point convergence tests
 - Band structure calculation
 
-![BAND](figures/band.svg)
+![BAND](Si_bulk/figures/band.svg)
 
 2. Monolayer WSe₂ — 2H vs 1T Phases
 
@@ -82,8 +82,8 @@ Findings:
 - 1T-WSe₂ shows metallic band dispersion
 - Results consistent with known experimental and theoretical trends
 
-![2H band](figures/band_2H.svg)
-![1T band](figures/band_1T.svg)
+![2H band](WSe2_monolayer_2H_vs_1T/figures/band_2H.svg)
+![1T band](WSe2_monolayer_2H_vs_1T/figures/band_1T.svg)
 
 ---
 
