@@ -1,0 +1,5 @@
+                            User time (sec):        8.197
+                          System time (sec):        0.240
+                         Elapsed time (sec):        8.970
+
+                   Maximum memory used (kb):      280768.
