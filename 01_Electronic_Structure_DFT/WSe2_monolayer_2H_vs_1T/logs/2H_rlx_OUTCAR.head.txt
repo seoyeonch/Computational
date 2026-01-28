@@ -1,0 +1,6 @@
+ vasp.6.4.2 20Jul23 (build Jun 27 2025 22:29:36) complex
+
+ executed on                 NODE date 2025.11.02  22:26:32
+ running   12 mpi-ranks, with    1 threads/rank, on    1 nodes
+ distrk:  each k-point on   12 cores,    1 groups
+ distr:  one band on NCORE=  12 cores,    1 groups
