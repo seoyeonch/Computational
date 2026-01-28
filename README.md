@@ -65,25 +65,6 @@ primary focus of my research portfolio.
 
 ---
 
-### 3. Ab Initio Molecular Dynamics (VASP AIMD)
-
-Directory: `01_Electronic_Structure_DFT/AIMD_Si_bulk/`
-
-This project demonstrates a basic ab initio molecular dynamics workflow
-for Si bulk based on official VASP tutorials, using NVT ensemble MD.
-
-This section summarizes my exploration of VASP’s machine-learned force field
-framework, including:
-
-- Reading and studying the theoretical foundations of MLFF  
-- Following official VASP tutorials (molecules, bulk, MD, MLFF)  
-- Understanding training workflows and practical limitations  
-
-This track reflects my interest in extending first-principles methods to
-larger-scale simulations.
-
----
-
 ## Methodological Notes
 
 Directory: `60_Methodological_Notes/`
