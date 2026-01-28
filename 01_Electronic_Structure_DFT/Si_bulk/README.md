@@ -25,6 +25,8 @@ The total energy was found to converge within 1 meV/atom at ENCUT ≥ 450 eV.
 
 *(Figure: ENCUT vs Total Energy)*
 
+![ENCUT](figures/econv.svg)
+
 ### k-point Convergence
 We tested Monkhorst–Pack k-point meshes from 4×4×4 to 12×12×12.  
 Energy convergence within 1 meV/atom was achieved at 8×8×8.
@@ -35,8 +37,6 @@ Energy convergence within 1 meV/atom was achieved at 8×8×8.
 
 ### Optimized Lattice Constant
 The optimized lattice constant obtained from total energy minimization is approximately 5.43 Å, which is in good agreement with the experimental value (~5.43 Å).
-
-![ENCUT](figures/econv.svg)
 
 ### Band Structure
 The calculated band structure shows an indirect band gap with the valence band maximum at Γ and the conduction band minimum near the X point.  
