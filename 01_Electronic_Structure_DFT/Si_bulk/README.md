@@ -57,11 +57,10 @@ The DOS indicates dominant contributions from Si p-orbitals near the valence ban
 
 ## Directory Structure
 
-Bulk_Si/
-├── input/ # VASP input files
-├── scripts/ # Automation and post-processing scripts
-├── results/ # Raw calculation outputs
-└── figures/ # Plots and visualizations
+- calc/     : Step-by-step DFT input files (convergence tests, relaxation, band, DOS)
+- scripts/  : Job submission and post-processing scripts (SLURM, Python)
+- data/     : Parsed numerical outputs
+- figures/  : Final plots used for analysis and presentation
 
 ## How to Reproduce
 
