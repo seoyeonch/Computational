@@ -11,7 +11,7 @@ VASP electronic structure calculations for WSe₂ monolayers.
 - `extract_kconv.sh`  
   Extracts total energies from k-point convergence calculations.
 
-- `run_vcsv.sh`
+- `run_vcsv.sh`  
   SLURM batch script for automated VASP relaxation and variable-cell calculations
 on an HPC cluster.
 
