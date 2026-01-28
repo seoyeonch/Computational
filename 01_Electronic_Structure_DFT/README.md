@@ -52,7 +52,7 @@ This project aims to:
 ---
 
 ## Project Structure
-1. Bulk Silicon (Benchmark Study)
+1. Bulk Silicon
 
 Objective:
 Validate computational setup and convergence protocols.
