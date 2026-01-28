@@ -37,7 +37,7 @@ The total energy was found to converge within 1 meV/atom at ENCUT ≥ 400 eV.
 
 ### k-point Convergence
 We tested k-point meshes from 4×4×1 to 40×40×1.  
-Energy convergence within 1 meV/atom was achieved at 12×12×1.
+Energy convergence within 1 meV/atom was achieved at 8x8x1 and 12×12×1.
 
 ![2H KPOINTS](figures/kconv_2H.svg)
 ![1T KPOINTS](figures/kconv_1T.svg)
