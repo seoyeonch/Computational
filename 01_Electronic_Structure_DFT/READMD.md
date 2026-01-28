@@ -13,9 +13,7 @@ Understanding structure–property relationships in acknowledged benchmark syste
 This project aims to:
 
 - establish robust convergence protocols for plane-wave DFT,
-
 - analyze phase-dependent electronic properties, and
-
 - develop reproducible, scalable workflows suitable for high-throughput calculations.
 
 ## Key Research Outcomes
@@ -62,9 +60,7 @@ Validate computational setup and convergence protocols.
 Key Tasks:
 
 - Structural optimization
-
 - Energy cutoff and k-point convergence tests
-
 - Band structure calculation
 
 2. Monolayer WSe₂ — 2H vs 1T Phases
@@ -75,17 +71,13 @@ Compare electronic structures of semiconducting (2H) and metallic (1T) phases.
 Key Tasks:
 
 - Geometry optimization of both phases
-
 - Electronic band structure and DOS analysis
-
 - Phase-dependent electronic behavior comparison
 
 Findings:
 
 - 2H-WSe₂ exhibits a finite band gap
-
 - 1T-WSe₂ shows metallic band dispersion
-
 - Results consistent with known experimental and theoretical trends
 
 ---
@@ -95,9 +87,7 @@ Findings:
 Each project directory includes:
 
 - input files (INCAR, POSCAR, KPOINTS)
-
 - SLURM job scripts
-
 - post-processing scripts
 
 Calculations are organized to allow full reproduction of results given access to VASP and an HPC environment.
@@ -117,15 +107,10 @@ gnuplot plot_band.gp
 ## Research Skills Demonstrated
 
 - First-principles DFT calculations
-
 - Convergence testing and validation
-
 - Electronic structure analysis (band structure, DOS)
-
 - Linux-based HPC computing
-
 - SLURM batch job automation
-
 - Scientific data visualization
 
 ---
