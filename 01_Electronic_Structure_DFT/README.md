@@ -99,27 +99,6 @@ Calculations are organized to allow full reproduction of results given access to
 
 ---
 
-## How to Run (Example)
-
-sbatch run.sh
-
-Post-processing:
-
-gnuplot plot_band.gp
-
----
-
-## Research Skills Demonstrated
-
-- First-principles DFT calculations
-- Convergence testing and validation
-- Electronic structure analysis (band structure, DOS)
-- Linux-based HPC computing
-- SLURM batch job automation
-- Scientific data visualization
-
----
-
 ## Contact
 
 S. Chae
