@@ -1,4 +1,4 @@
-# Computational Condensed Matter Portfolio
+# Computational physics projects
 
 ## Overview
 This repository presents selected computational physics projects conducted
